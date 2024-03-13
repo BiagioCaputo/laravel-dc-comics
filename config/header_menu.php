@@ -1,8 +1,9 @@
 <?php 
 
 return [
+    ['text' => 'Home', 'route_name' => 'home'],
     ['text' => 'Characters', 'route_name' => 'characters'],
-    ['text' => 'Comics', 'route_name' => 'comics'],
+    ['text' => 'Comics', 'route_name' => 'comics.index'],
     ['text' => 'Movies', 'route_name' => 'movies'],
     ['text' => 'Tv', 'route_name' => 'tv'],
     ['text' => 'Games', 'route_name' => 'games'],

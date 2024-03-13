@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ComicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,15 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $comics = config('comics');
-    return view('home', compact('comics'));
-})->name('comics');
+    return view('home');
+})->name('home');
 
-Route::get('/comics/{index}', function ($index) {
-    $comics = config('comics');
+Route::get('/comics', [ComicController::class, 'index'] )->name('comics.index');
+Route::get('/comics/{comic}', [ComicController::class, 'show']  )->name('comics.show');
 
-   return view('includes.comics.show',['comics' => $comics[$index]] );
-})->name('comic');
 
 Route::get('/characters', function () {
     return view('characters');
