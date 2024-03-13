@@ -1,0 +1,109 @@
+.blu-separator {
+    height: 80px;
+    background-color: #0282F9;
+
+    .comic-figure {
+        position: relative;
+
+        img {
+            max-height: 300px;
+            position: absolute;
+            bottom: -60px;
+        }
+
+        .comic-type {
+            position: absolute;
+            top: -235px;
+            background-color: #01A8D9;
+            color: white;
+            padding: 5px 5px;
+        }
+
+        .vg {
+            position: absolute;
+            bottom: -60px;
+            width: 197px;
+            background-color: #01A8D9;
+            color: white;
+            padding: 5px 5px;
+            text-align: center;
+        }
+    }
+
+}
+
+.upper-comic-details {
+    display: flex;
+    gap: 30px;
+    padding: 40px 0;
+
+    .upper-comic-generics {
+        flex-basis: 70%;
+
+        h1 {
+            color: #04508f;
+            font-size: 2.5rem;
+        }
+
+        .availability {
+            display: flex;
+            color: white;
+            background: #55BA59;
+            margin: 20px 0;
+
+            .availability-left {
+                flex-basis: 70%;
+                display: flex;
+                justify-content: space-between;
+                padding: 15px;
+                border-right: 1px solid black;
+                color: lightgrey;
+
+                span {
+                    color: white;
+                }
+            }
+
+
+            .availability-right {
+                padding: 15px 20px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        p {
+            line-height: 1.8rem;
+        }
+
+    }
+}
+
+.bottom-comic-details {
+    background-color: #F6F6F6;
+    padding: 50px 0;
+
+    .bottom-comic-generics {
+        display: flex;
+        gap: 20px;
+
+        a {
+            color: #4EC5EC;
+        }
+
+
+        .talents {
+            flex-basis: 50%;
+        }
+
+        .talents-box {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .specs-box {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
