@@ -2,6 +2,12 @@
     padding: 100px;
     text-align: center;
 
+    .alert {
+        color: red;
+        padding: 40px;
+        border: 1px solid red;
+    }
+
     .form-create-comic {
         margin-bottom: 30px;
         padding: 5px 10px;
