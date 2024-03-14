@@ -7,7 +7,7 @@
 <main>
     <section id="create-section container">
         <div class="form-box">
-            <form action="" method="POST">
+            <form action="{{ route('comics.store')}}" method="POST">
             @csrf 
             <div class="form-create-comic">
                 <label for="title">Titolo comic</label>
@@ -45,6 +45,10 @@
                 <label for="writers">Scrittori comic</label>
                 <input type="text" name="writers" id="writers" placeholder="">
             </div>
+            <div class="form-create-comic">
+                <input type="submit" style="width:100px"/>
+            </div>
+            
             </form>
         </div>
     </section>

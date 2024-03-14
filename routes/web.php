@@ -18,8 +18,16 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+//rotta lista comics
 Route::get('/comics', [ComicController::class, 'index'] )->name('comics.index');
+
+//rotta creazione comic
 Route::get('/comics/create', [ComicController::class, 'create']  )->name('comics.create');
+
+//rotta salvataggio nuovo comic
+Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
+
+//rotta mostra singolo comic
 Route::get('/comics/{comic}', [ComicController::class, 'show']  )->name('comics.show');
 
 
