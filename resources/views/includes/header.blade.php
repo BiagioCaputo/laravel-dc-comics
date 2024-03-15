@@ -16,6 +16,7 @@
         </nav>
 
     </div>
+    <div class="jumbotron"></div>
 </header>
 
-<div class="jumbotron"></div>
+
