@@ -55,15 +55,15 @@
                         <h2>Specs</h2>
                         <div class="specs-box">
                             <h5>Series:</h5>
-                            <h4>{{$comic->series}}</h4>
+                            <span>{{$comic->series}}</span>
                         </div>
                         <div class="specs-box">
                             <h5>U.S. Price:</h5>
-                            <h4>{{$comic->price}}</h4>
+                            <span>{{$comic->price}}</span>
                         </div>
                         <div class="specs-box">
                             <h5>On Sale Date:</h5>
-                            <h4>{{$comic->sale_date}}</h4>
+                            <span>{{$comic->sale_date}}</span>
                         </div>
                     </div>
                 </div>

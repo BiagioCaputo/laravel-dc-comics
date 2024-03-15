@@ -28,6 +28,10 @@
     {{-- Footer --}}
     @include('includes.footer')
 
+    {{-- Scripts --}}
+    @yield('scripts')
+
+
 
 </body>
 </html>
