@@ -67,6 +67,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="text-center mt-5">
+                    <a href="{{route('comics.edit', $comic->id)}}"><button type="submit" class="btn btn-primary">Edit</button></a>
+                </div>
             </div>
             
         </div>
