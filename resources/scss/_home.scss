@@ -14,17 +14,6 @@
         }
     }
 
-    .cards-row {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -1rem;
-    }
-
-    .cards-col {
-        padding: 1rem;
-        flex-basis: calc(100% / 6);
-    }
-
     .comic-card {
         height: 100%;
     }

@@ -11,9 +11,9 @@
         <div class="container">
             <div id="current-series" class="blue-spacing">CURRENT SERIES</div>
             <div class="cards-container">
-                <div class="cards-row">
+                <div class="row">
                     @foreach($comics as $comic)
-                    <div class="cards-col">
+                    <div class="col-2">
                         <div class="comic-card">
                             <a href="{{ route('comics.show', $comic->id)}}">
                                 <figure>
