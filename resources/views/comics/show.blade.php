@@ -67,9 +67,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="text-center mt-5">
-                    <a href="{{route('comics.edit', $comic->id)}}"><button type="submit" class="btn btn-primary">Edit</button></a>
+                <div class="d-flex justify-content-around mt-5">
+                    <div>
+                        <a href="{{route('comics.edit', $comic->id)}}"><button type="submit" class="btn btn-primary">Edit</button></a>
+                    </div>
+                    <form action="{{ route('comics.destroy', $comic) }}" method="POST" class="delete-form">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
                 </div>
+                
             </div>
             
         </div>

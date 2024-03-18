@@ -111,9 +111,11 @@
                     </div>
                 </div>
                 
-                <div class="mb-3">
+                <div class="my-4">
                     <button type="submit" class="btn btn-primary">SEND</button>
                 </div>
+
+
             </div>
         </form>
     </div>
