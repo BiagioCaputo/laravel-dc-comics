@@ -71,7 +71,7 @@
                     <div>
                         <a href="{{route('comics.edit', $comic->id)}}"><button type="submit" class="btn btn-primary">Edit</button></a>
                     </div>
-                    <form action="{{ route('comics.destroy', $comic) }}" method="POST" class="delete-form">
+                    <form action="{{ route('comics.destroy', $comic) }}" method="POST" id="delete-form">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Delete</button>
@@ -84,6 +84,24 @@
     </section>
 </main>
 
+@endsection
 
+@section('scripts')
+
+    {{--Creo una funzione che chieda conferma all'utente per l'eliminazione--}}
+    <script>
+        const deleteForm = document.getElementById('delete-form');
+
+        deleteForm.addEventListener('submit', e => {
+            //impedisco l'invio del form
+            e.preventDefault();
+
+            //chiedo la conferma all'utente
+            const confirmation = confirm('Sei sicuro di voler eliminare il comic {{ $comic->title}} ?')
+
+            if(confirmation) deleteForm.submit();
+        })
+
+    </script>
 
 @endsection
