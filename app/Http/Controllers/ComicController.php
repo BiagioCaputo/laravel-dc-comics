@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Comic;
+use App\Http\Requests\StoreComicRequest;
+use App\Http\Requests\UpdateComicRequest;
 
 class ComicController extends Controller
 {
@@ -27,21 +29,10 @@ class ComicController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreComicRequest $request)
     {
-        $data = $request->validate([
-            'title' => 'required|string',
-            'description' => 'required|string',
-            'thumb' => 'required|string',
-            'price' => 'required|string',
-            'series' => 'required|string',
-            'sale_date' => 'required|date',
-            'type' => 'required|string',
-            'artists' => 'required|string',
-            'writers' => 'required|string'
-        ]);
-
-        $data = $request->all();
+        //inserisco in data i dati validi
+        $data = $request->validated();
 
         $comic = new Comic();
 
@@ -50,7 +41,6 @@ class ComicController extends Controller
         $comic->save();
 
         return to_route('comics.show', $comic->id);
-
 
     }
 
@@ -73,25 +63,11 @@ class ComicController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Comic $comic)
+    public function update(UpdateComicRequest $request, Comic $comic)
     {
-        $data = $request->validate([
-            'title' => 'required|string',
-            'description' => 'required|string',
-            'thumb' => 'required|string',
-            'price' => 'required|string',
-            'series' => 'required|string',
-            'sale_date' => 'required|date',
-            'type' => 'required|string',
-            'artists' => 'required|string',
-            'writers' => 'required|string'
-        ]);
+        $data = $request->validated();
 
-        $data = $request->all();
-
-        $comic->fill($data);
-
-        $comic->save();
+        $comic->update($data);
 
         return to_route('comics.show', $comic->id);
     }
